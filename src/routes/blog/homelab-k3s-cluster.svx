@@ -53,7 +53,7 @@ I dug up an old USB hard drive and hooked it up to the server node, provisioned 
 
 Once that was up and running, I had a nice looking dashboard and a ready-to-go sandbox for any projects I want to throw at it!
 
-![Grafana Dashboard]/images/k3s-grafana.png)
+![Grafana Dashboard](/images/k3s-grafana.png)
 
 ## Lessons
 

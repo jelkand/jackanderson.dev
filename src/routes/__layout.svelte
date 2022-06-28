@@ -1,15 +1,13 @@
 <script>
 	import '../app.css';
+	import '../../static/prism-material-light.css';
+	import '../../static/prism-material-dark.css';
 </script>
 
-<!-- <div id="hyvor-talk-view" />
-	<script type="text/javascript">
-		var HYVOR_TALK_WEBSITE = 7312;
-		var HYVOR_TALK_CONFIG = {
-			url: false,
-			id: false
-		};
-	</script>
-	<script async type="text/javascript" src="//talk.hyvor.com/web-api/embed.js"></script> -->
+<div class="h-screen ">
+	<header>
+		<h1 class="font-barlow text-2xl md:text-3xl transition-all ">Jack Anderson</h1>
+	</header>
 
-<slot />
+	<slot />
+</div>

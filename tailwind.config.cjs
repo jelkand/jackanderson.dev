@@ -4,9 +4,11 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-				barlow: ['Barlow']
+				barlow: ['Barlow'],
+				'roboto-mono': ['Roboto Mono']
 			}
 		}
 	},
+	darkMode: ['class', '[data-mode="dark"]'],
 	plugins: [require('@tailwindcss/typography')]
 };

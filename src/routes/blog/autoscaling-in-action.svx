@@ -53,16 +53,16 @@ Note that when we use about 50% of a single CPU, we should be hitting a limit. I
 
 Also note that we've asked for a single replica, and when this is deployed, that's what we get. I'm excluding a couple load balancers from this list--but they're there too.
 
-![Single pod on the dashboard]/images/single-pod-baas.png)
+![Single pod on the dashboard](/images/single-pod-baas.png)
 
 Here's the request we're sending over, via Insomnia. Note that sorting 13 integers takes a minute and a half, and nearly 67 million shuffles.
 
-![Request via Insomnia]/images/insomnia-request.png)
+![Request via Insomnia](/images/insomnia-request.png)
 
 As we might expect, sending a request will take our CPU usage to the limit, up to a full CPU of utilization (the limit for a single pod on node as it's single threaded).
 We have not yet added in an autoscaler, so we still only see one pod.
 
-![Pinned CPU with a request]/images/pinned-cpu.png)
+![Pinned CPU with a request](/images/pinned-cpu.png)
 
 ## Autoscaling
 
@@ -94,7 +94,7 @@ horizontalpodautoscaler.autoscaling/baas created
 
 When we fire off another request we see four more pods spin up to handle the load--just what we'd expect. Also note that they're distributed between my two agent nodes.
 
-![Five pods spinning up to handle the load]/images/replicas.png)
+![Five pods spinning up to handle the load](/images/replicas.png)
 
 In our case, we could handle a new request for each pod. There's only so much the autoscaler can do when the service is so bad.
 

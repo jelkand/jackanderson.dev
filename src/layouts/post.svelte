@@ -1,0 +1,21 @@
+<script>
+	// import Comments from '../../components/Comments.svelte';
+	import { format } from 'date-fns';
+	export let title = '';
+	export let date;
+	// export let category;
+	// export let description;
+	// export let tags;
+
+	const formattedDate = format(new Date(date), 'PPP');
+</script>
+
+<div class="flex place-content-center prose-headings:font-barlow prose-code:font-roboto-mono">
+	<article class="prose">
+		<h1>{title}</h1>
+		<h2>{formattedDate}</h2>
+		<slot />
+	</article>
+</div>
+
+<!-- <Comments /> -->

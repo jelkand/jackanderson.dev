@@ -11,7 +11,9 @@ const config = {
 		preprocess({
 			postcss: true
 		}),
-		mdsvex()
+		mdsvex({
+			layout: './src/layouts/post.svelte'
+		})
 	],
 
 	kit: {

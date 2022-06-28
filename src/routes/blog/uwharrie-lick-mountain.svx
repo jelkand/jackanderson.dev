@@ -7,7 +7,7 @@ tags:
   - trip-report
 ---
 
-![Campsite near Lick Mountain]/images/uwharrie-campsite.png)
+![Campsite near Lick Mountain](/images/uwharrie-campsite.png)
 
 ## Lick Mountain
 

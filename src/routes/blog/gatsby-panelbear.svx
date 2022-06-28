@@ -20,7 +20,7 @@ It goes without saying that you need an account with [Panelbear](https://panelbe
 
 Ensure you collect your Site ID from your site settings page. Mine is conveniently blurred.
 
-![Panelbear Site Settings]/images/site-settings.png)
+![Panelbear Site Settings](/images/site-settings.png)
 
 ### Installation
 
@@ -50,7 +50,7 @@ In your `gatsby-config.js` add in the following snippet:
 
 Watch the events roll in. (I assume your blog gets a little more traffic than mine :) )
 
-![Panelbear Dashboard]/images/panelbear-dashboard.png)
+![Panelbear Dashboard](/images/panelbear-dashboard.png)
 
 ## Why Panelbear?
 

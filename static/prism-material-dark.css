@@ -1,0 +1,205 @@
+code[class*='language-'][data-mode='dark'],
+pre[class*='language-'][data-mode='dark'] {
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	color: #eee;
+	background: #2f2f2f;
+	font-family: Roboto Mono, monospace;
+	font-size: 1em;
+	line-height: 1.5em;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+code[class*='language-'][data-mode='dark']::-moz-selection,
+pre[class*='language-'][data-mode='dark']::-moz-selection,
+code[class*='language-'][data-mode='dark'] ::-moz-selection,
+pre[class*='language-'][data-mode='dark'] ::-moz-selection {
+	background: #363636;
+}
+
+code[class*='language-'][data-mode='dark']::selection,
+pre[class*='language-'][data-mode='dark']::selection,
+code[class*='language-'][data-mode='dark'] ::selection,
+pre[class*='language-'][data-mode='dark'] ::selection {
+	background: #363636;
+}
+
+:not(pre) > code[class*='language-'][data-mode='dark'] {
+	white-space: normal;
+	border-radius: 0.2em;
+	padding: 0.1em;
+}
+
+pre[class*='language-'][data-mode='dark'] {
+	overflow: auto;
+	position: relative;
+	margin: 0.5em 0;
+	padding: 1.25em 1em;
+}
+
+.language-css[data-mode='dark'] > code,
+.language-sass[data-mode='dark'] > code,
+.language-scss[data-mode='dark'] > code {
+	color: #fd9170;
+}
+
+[class*='language-'][data-mode='dark'] .namespace {
+	opacity: 0.7;
+}
+
+.token.atrule[data-mode='dark'] {
+	color: #c792ea;
+}
+
+.token.attr-name[data-mode='dark'] {
+	color: #ffcb6b;
+}
+
+.token.attr-value[data-mode='dark'] {
+	color: #a5e844;
+}
+
+.token.attribute[data-mode='dark'] {
+	color: #a5e844;
+}
+
+.token.boolean[data-mode='dark'] {
+	color: #c792ea;
+}
+
+.token.builtin[data-mode='dark'] {
+	color: #ffcb6b;
+}
+
+.token.cdata[data-mode='dark'] {
+	color: #80cbc4;
+}
+
+.token.char[data-mode='dark'] {
+	color: #80cbc4;
+}
+
+.token.class[data-mode='dark'] {
+	color: #ffcb6b;
+}
+
+.token.class-name[data-mode='dark'] {
+	color: #f2ff00;
+}
+
+.token.comment[data-mode='dark'] {
+	color: #616161;
+}
+
+.token.constant[data-mode='dark'] {
+	color: #c792ea;
+}
+
+.token.deleted[data-mode='dark'] {
+	color: #ff6666;
+}
+
+.token.doctype[data-mode='dark'] {
+	color: #616161;
+}
+
+.token.entity[data-mode='dark'] {
+	color: #ff6666;
+}
+
+.token.function[data-mode='dark'] {
+	color: #c792ea;
+}
+
+.token.hexcode[data-mode='dark'] {
+	color: #f2ff00;
+}
+
+.token.id[data-mode='dark'] {
+	color: #c792ea;
+	font-weight: bold;
+}
+
+.token.important[data-mode='dark'] {
+	color: #c792ea;
+	font-weight: bold;
+}
+
+.token.inserted[data-mode='dark'] {
+	color: #80cbc4;
+}
+
+.token.keyword[data-mode='dark'] {
+	color: #c792ea;
+}
+
+.token.number[data-mode='dark'] {
+	color: #fd9170;
+}
+
+.token.operator[data-mode='dark'] {
+	color: #89ddff;
+}
+
+.token.prolog[data-mode='dark'] {
+	color: #616161;
+}
+
+.token.property[data-mode='dark'] {
+	color: #80cbc4;
+}
+
+.token.pseudo-class[data-mode='dark'] {
+	color: #a5e844;
+}
+
+.token.pseudo-element[data-mode='dark'] {
+	color: #a5e844;
+}
+
+.token.punctuation[data-mode='dark'] {
+	color: #89ddff;
+}
+
+.token.regex[data-mode='dark'] {
+	color: #f2ff00;
+}
+
+.token.selector[data-mode='dark'] {
+	color: #ff6666;
+}
+
+.token.string[data-mode='dark'] {
+	color: #a5e844;
+}
+
+.token.symbol[data-mode='dark'] {
+	color: #c792ea;
+}
+
+.token.tag[data-mode='dark'] {
+	color: #ff6666;
+}
+
+.token.unit[data-mode='dark'] {
+	color: #fd9170;
+}
+
+.token.url[data-mode='dark'] {
+	color: #ff6666;
+}
+
+.token.variable[data-mode='dark'] {
+	color: #ff6666;
+}
