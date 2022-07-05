@@ -1,11 +1,4 @@
-export type Post = {
-	slug: string;
-	title: string;
-	date: Date;
-	description: string;
-	category?: string;
-	tags?: string[];
-};
+import type { Post } from 'src/types/Post';
 
 export type Metadata = {
 	title: string;
