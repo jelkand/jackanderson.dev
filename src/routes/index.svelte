@@ -1,7 +1,7 @@
 <div class="h-screen m-10">
 	<h1 class="text-4xl font-barlow">Hi, I'm Jack.</h1>
 	<h2 class="text-lg my-2">
-		I currently work as a tech lead and software engineer at <a href="https:/atomic.financial"
+		I currently work as a tech lead and software engineer at <a href="https://atomic.financial"
 			>Atomic Financial.</a
 		>
 	</h2>
