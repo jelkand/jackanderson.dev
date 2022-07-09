@@ -15,7 +15,9 @@
 	<html lang="en" />
 </svelte:head>
 
-<div class="flex place-content-center prose-headings:font-barlow prose-code:font-roboto-mono">
+<div
+	class="flex place-content-center prose-headings:font-barlow prose-code:font-roboto-mono mx-2 sm:m-auto"
+>
 	<article class="prose">
 		<h1>{title}</h1>
 		<h2>{formattedDate}</h2>
