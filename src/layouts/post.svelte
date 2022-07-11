@@ -22,6 +22,6 @@
 		<h1>{title}</h1>
 		<h2>{formattedDate}</h2>
 		<slot />
+		<Comments />
 	</article>
-	<Comments />
 </div>
