@@ -1,5 +1,5 @@
 <script>
-	// import Comments from '../../components/Comments.svelte';
+	import Comments from 'src/components/Comments.svelte';
 	import { format } from 'date-fns';
 	export let title = '';
 	export let date;
@@ -25,4 +25,4 @@
 	</article>
 </div>
 
-<!-- <Comments /> -->
+<Comments />
