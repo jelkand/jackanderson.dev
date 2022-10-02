@@ -13,7 +13,7 @@ export async function getPosts() {
 				const {
 					metadata: { title, description, date: rawDate, category, tags }
 				} = await val();
-				const slug = _pathToSlug(path);
+				const slug = _pathToSlug(path).replace('routes/', '');
 				return { slug, title, description, date: new Date(rawDate), category, tags };
 			}, [] as Post[])
 		);
