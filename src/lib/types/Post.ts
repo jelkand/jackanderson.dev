@@ -1,7 +1,7 @@
 export type Post = {
 	slug: string;
 	title: string;
-	date: Date;
+	date: string;
 	description: string;
 	category?: string;
 	tags?: string[];

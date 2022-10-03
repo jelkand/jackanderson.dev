@@ -8,4 +8,4 @@ export const name = 'Jack Anderson';
 /**
  * Used for SEO in /posts/[slug]
  */
-export const website = 'https://jackanderson.dev';
+export const website = 'https://jackanderson.dev/';

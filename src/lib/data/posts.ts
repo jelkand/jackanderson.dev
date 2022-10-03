@@ -26,10 +26,11 @@ export const posts = Object.entries(
 			...post.metadata,
 
 			// generate the slug from the file path
+			// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 			slug: filepath
 				.replace(/(\/index)?\.md/, '')
 				.split('/')
-				.pop(),
+				.pop()!,
 
 			// whether or not this file is `my-post.md` or `my-post/index.md`
 			// (needed to do correct dynamic import in posts/[slug].svelte)
