@@ -5,9 +5,7 @@ import { XMLBuilder } from 'fast-xml-parser';
 import type { RequestHandler } from './$types';
 export const prerender = true;
 
-const websiteDescription = `Jack Anderson`;
-const postsUrl = `${website}/blog`;
-
+const slugToURL = (slug: string) => `${website}blog/${slug}`;
 export const GET: RequestHandler = () => {
 	const data = {
 		'?xml': {
@@ -18,13 +16,10 @@ export const GET: RequestHandler = () => {
 			'@xmlns': 'http://www.w3.org/2005/Atom',
 			title: name,
 			link: {
-				'@href': `${website}/atom.xml`,
+				'@href': `${website}atom.xml`,
 				'@rel': 'self',
 				'@type': 'application/atom+xml'
 			},
-			// link: {
-			// 	'@href': website
-			// },
 			updated: formatRFC3339(new Date(posts[0].date)),
 			author: {
 				name: 'Jack Anderson',
@@ -33,11 +28,11 @@ export const GET: RequestHandler = () => {
 			id: website,
 			subtitle: 'A blog by Jack Anderson',
 			entry: posts.map((post) => ({
-				id: `${website}/${post.slug}`,
+				id: slugToURL(post.slug),
 				title: post.title,
 				link: {
 					'@rel': 'alternate',
-					'@href': `${website}/${post.slug}`
+					'@href': slugToURL(post.slug)
 				},
 				updated: formatRFC3339(new Date(post.date)),
 				published: formatRFC3339(new Date(post.date)),
