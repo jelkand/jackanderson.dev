@@ -1,8 +1,9 @@
+import { json } from '@sveltejs/kit';
 import { getPosts } from 'src/lib/get-posts';
 import { name, website } from 'src/lib/info';
 import { XMLBuilder } from 'fast-xml-parser';
 
-export async function get() {
+export async function GET() {
 	const posts = await getPosts();
 	const headers = {
 		'Cache-Control': 'max-age=0, s-maxage=3600',
@@ -48,6 +49,11 @@ export async function get() {
 
 	const body = builder.build(obj);
 
+	throw new Error("@migration task: Migrate this return statement (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292701)");
+	// Suggestion (check for correctness before using):
+	// return json(body, {
+	// 	headers: headers
+	// });
 	return {
 		headers,
 		body

@@ -6,7 +6,7 @@
 	import { fly } from 'svelte/transition';
 	import { MenuIcon, XIcon } from 'svelte-feather-icons';
 
-	import { theme } from 'src/stores/theme';
+	import { theme } from '$lib/stores/theme';
 
 	const headerLinks = [
 		{ url: '/', label: 'Home' },
