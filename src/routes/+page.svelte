@@ -32,7 +32,7 @@
 	</section>
 	<section class="w-full">
 		<div class="flex items-center justify-between gap-4 mb-8">
-			<h2 class="text-sm font-medium sm:text-base text-zinc-400 dark:text-zinc-500">
+			<h2 class="text-sm font-medium sm:text-base text-zinc-500 dark:text-zinc-400">
 				Most Recent Posts
 			</h2>
 			<a href="/blog" class="flex items-center gap-1 text-sm font-medium text-teal-500"

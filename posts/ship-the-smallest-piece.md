@@ -19,7 +19,7 @@ I've reached a point where I'm able to distill out a few distinct lessons from w
 
 Each of these is enough to justify a post of its own, so today I'll just focus on the first point. I'll link to subsequent posts above as I release them.
 
-# Ship the smallest useful piece
+## Ship the smallest useful piece
 
 To explain this, I could rephrase it or throw the thesaurus at it: The smallest meaningful unit of work. The smallest cohesive piece. The minimum viable feature.
 
