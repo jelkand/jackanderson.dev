@@ -68,7 +68,7 @@
 				>
 					{data.post.title}
 				</h1>
-				<div class="flex items-center order-first text-base text-zinc-400 dark:text-zinc-500">
+				<div class="flex items-center text-base text-zinc-400 dark:text-zinc-500 mt-3">
 					<span class="h-4 w-0.5 rounded-full bg-zinc-200 dark:bg-zinc-500" />
 					<time dateTime={data.post.date}>
 						<span class="ml-3">{format(new Date(parseISO(data.post.date)), 'MMMM d, yyyy')}</span>
