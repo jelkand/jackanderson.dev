@@ -10,7 +10,7 @@ tags:
   - 'autoscaling'
 ---
 
-I've been working on an autoscaling demo for a minute. To do this, I've [put together a homelab cluster](/homelab-k3s-cluster), [built a service that will hog every ounce of CPU](/anti-optimizing), and [deployed it](/multiarchitecture-docker).
+I've been working on an autoscaling demo for a minute. To do this, I've [put together a homelab cluster](/blog/homelab-k3s-cluster), [built a service that will hog every ounce of CPU](/blog/anti-optimizing), and [deployed it](/blog/multiarchitecture-docker).
 
 ## The baseline
 

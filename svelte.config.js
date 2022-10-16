@@ -21,7 +21,7 @@ const config = {
 			$: 'src'
 		},
 		prerender: {
-			entries: ['*', '/sitemap.xml', '/rss.xml']
+			entries: ['*', '/sitemap.xml', '/atom.xml']
 		}
 	}
 };
