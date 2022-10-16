@@ -37,7 +37,9 @@
 					{/each}
 				</div>
 
-				<ThemeToggle />
+				<div class="md:block hidden">
+					<ThemeToggle />
+				</div>
 
 				<div class="flex-initial items-center md:hidden m-3">
 					<button class="flex items-center" on:click={() => (menuOpen = true)}><MenuIcon /></button>
