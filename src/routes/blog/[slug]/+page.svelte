@@ -115,4 +115,4 @@
 	</div>
 </div>
 
-<!-- <Comments /> -->
+<Comments />
