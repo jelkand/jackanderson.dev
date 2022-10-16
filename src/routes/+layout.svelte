@@ -11,8 +11,6 @@
 		{ url: 'https://www.linkedin.com/in/jackelkanderson/', label: 'LinkedIn' },
 		{ url: 'https://www.github.com/jelkand', label: 'GitHub' }
 	];
-
-	let menuOpen = false;
 </script>
 
 <div class="flex flex-col min-h-screen">
