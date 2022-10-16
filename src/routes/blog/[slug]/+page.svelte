@@ -1,23 +1,16 @@
 <script lang="ts">
 	import Comments from '$lib/components/Comments.svelte';
+	import ToC from '$/lib/components/ToC.svelte';
 	import type { PageData } from './$types';
 	import { page } from '$app/stores';
 	import { name, website } from '$lib/info';
 
 	import { format, parseISO } from 'date-fns';
-	// export let title = '';
-	// export let date;
-	// export let category;
-	// export let description;
-	// export let tags;
-
 	export let data: PageData;
 
 	const ogImage = `https://og-image.vercel.app/**${encodeURIComponent(
 		data.post.title
 	)}**?theme=light&md=1&fontSize=100px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fhyper-color-logo.svg`;
-
-	// const formattedDate = format(new Date(date), 'PPP');
 
 	const url = `${website}/${data.post.slug}`;
 </script>
@@ -65,7 +58,7 @@
 		<div class="hidden xl:block absolute not-prose left-[100%]" aria-label="Table of Contents">
 			<div class="fixed z-10 px-4 py-2 ml-8 top-[4.5rem]">
 				<!-- ignore h1 tags as they should only be used for the post title -->
-				<!-- <ToC allowedHeadings={['h2', 'h3', 'h4', 'h5', 'h6']} /> -->
+				<ToC allowedHeadings={['h2', 'h3', 'h4', 'h5', 'h6']} />
 			</div>
 		</div>
 	</div>
@@ -82,3 +75,21 @@
 </div> -->
 
 <Comments />
+
+<style lang="postcss">
+	.post-preview {
+		@apply flex p-4 border border-slate-300 rounded-lg;
+	}
+
+	.post-preview-label {
+		@apply mb-2 text-slate-500 uppercase text-base font-medium;
+	}
+
+	:global(.dark) .post-preview {
+		@apply border-slate-700;
+	}
+
+	:global(.dark) .post-preview-label {
+		@apply text-slate-400;
+	}
+</style>

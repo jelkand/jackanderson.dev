@@ -2,11 +2,17 @@
 	import '../app.css';
 	import '../prism-material-light.css';
 	import '../prism-material-dark.css';
+	import { name } from '$lib/info';
+
+	import { Icon } from '@steeze-ui/svelte-icon';
+	import { Sun, Moon } from '@steeze-ui/heroicons';
 
 	import { fly } from 'svelte/transition';
 	import { MenuIcon, XIcon } from 'svelte-feather-icons';
 
 	import { theme } from '$lib/stores/theme';
+	import { browser } from '$app/environment';
+	import { Theme } from '$/lib/types/Theme';
 
 	const headerLinks = [
 		{ url: '/', label: 'Home' },
@@ -18,27 +24,46 @@
 	let menuOpen = false;
 </script>
 
-<div id="core" data-mode={theme}>
-	<!-- Links Mobile -->
-
-	<div class="h-screen dark:bg-slate-600 dark:text-white">
+<div id="core" data-mode={$theme} class="flex flex-col min-h-screen">
+	<div class="mx-auto flex flex-col flex-grow w-full max-w-4xl">
 		<header>
-			<div class="flex items-center">
-				<h1 class="font-barlow text-2xl md:text-3xl transition-all flex-auto m-2">
-					<a href="/">Jack Anderson</a>
-				</h1>
-				<!-- Desktop Menu -->
+			<div class="flex h-16 px-4 py-2 justify-between items-center">
+				<h2
+					class="!text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-teal-500 dark:from-violet-500 dark:to-pink-500"
+				>
+					<a class="text-lg sm:text-2xl font-bold" href="/">
+						{name}
+					</a>
+				</h2>
+
 				<div class="flex-initial items-center m-3  md:block hidden">
 					{#each headerLinks as link}
 						<a class="m-1" href={link.url}>{link.label}</a>
 					{/each}
+					{#if browser}
+						<button
+							type="button"
+							role="switch"
+							aria-label="Toggle Dark Mode"
+							aria-checked={true}
+							class="h-4 w-4 sm:h-8 sm:w-8 sm:p-1"
+							on:click={() => {
+								theme.set($theme === Theme.Dark ? Theme.Light : Theme.Dark);
+							}}
+						>
+							{#if $theme === Theme.Light}
+								<Icon src={Moon} theme="solid" class="text-slate-500" />
+							{:else}
+								<Icon src={Sun} theme="solid" class="text-slate-400" />
+							{/if}
+						</button>
+					{/if}
 				</div>
 
 				<div class="flex-initial items-center md:hidden m-3">
 					<button class="flex items-center" on:click={() => (menuOpen = true)}><MenuIcon /></button>
 				</div>
 			</div>
-
 			<!-- Mobile menu -->
 			{#if menuOpen}
 				<div
@@ -58,9 +83,12 @@
 				</div>
 			{/if}
 		</header>
-		<body on:click={() => (menuOpen = false)}>
+
+		<main
+			on:click={() => (menuOpen = false)}
+			class="prose prose-slate prose-sm sm:prose sm:prose-slate sm:prose-lg sm:max-w-none dark:prose-invert flex flex-col w-full flex-grow py-4 px-4"
+		>
 			<slot />
-		</body>
-		<footer />
+		</main>
 	</div>
 </div>

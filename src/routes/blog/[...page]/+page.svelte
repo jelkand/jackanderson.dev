@@ -7,36 +7,50 @@
 
 	$: isFirstPage = data.page === 1;
 	$: hasNextPage = data.posts[data.posts.length - 1]?.previous;
-
-	// const modules = import.meta.glob<{
-	// 	metadata: Metadata;
-	// }>('./*.svx');
-
-	// const sortedPostsPromise = (async () => {
-	// 	const posts = await Promise.all(
-	// 		Object.entries(modules).map(async ([path, val]) => {
-	// 			const {
-	// 				metadata: { title, description, date: rawDate, category, tags }
-	// 			} = await val();
-	// 			const slug = _pathToSlug(path);
-	// 			return { slug, title, description, date: new Date(rawDate), category, tags };
-	// 		}, [] as Post[])
-	// 	);
-
-	// 	return posts.sort((a, b) => compareDesc(a.date, b.date));
-	// })();
 </script>
 
 <svelte:head>
 	<title>{name} | Posts</title>
 </svelte:head>
 
-<div class="flex place-content-center">
-	<ul>
-		<!-- {#await sortedPostsPromise then sortedPosts} -->
+<div class="flex flex-col flex-grow">
+	<div class="flex-grow divide-y divide-slate-300 dark:divide-slate-700">
 		{#each data.posts as post}
-			<PostCard {post} />
+			<div class="py-8 first:pt-0">
+				<PostCard {post} />
+				<!-- <PostPreview {post} /> -->
+			</div>
 		{/each}
-		<!-- {/await} -->
-	</ul>
+	</div>
+
+	<!-- pagination -->
+	<div class="flex visible items-center justify-between pt-8 opacity-70">
+		{#if !isFirstPage}
+			<p>previous</p>
+			<!-- <ButtonLink raised={false} href={`/posts/page/${data.page - 1}`}>
+				<slot slot="icon-start">
+					<ArrowLeftIcon class="h-5 w-5" />
+				</slot>
+				Previous
+				<slot slot="icon-end" /></ButtonLink -->
+			>
+		{:else}
+			<div />
+		{/if}
+
+		{#if hasNextPage}
+			<p>Next</p>
+			<!-- <ButtonLink raised={false} href={`/posts/page/${data.page + 1}`}>Next</ButtonLink> -->
+		{/if}
+	</div>
 </div>
+
+<!-- <div class="flex place-content-center">
+	<ul>
+		{#await sortedPostsPromise then sortedPosts} -->
+<!-- {#each data.posts as post}
+			<PostCard {post} />
+		{/each} -->
+<!-- {/await} -->
+<!-- </ul> -->
+<!-- </div> -->
