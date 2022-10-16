@@ -1,10 +1,16 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
-@import './prism-material-light.css';
 @import './prism-material-dark.css';
+@import 'tailwindcss/utilities';
 
 @layer base {
+	@font-face {
+		font-family: 'Roboto Mono';
+		src: local('Roboto Mono'), url('/fonts/RobotoMono-VariableFont_wght.ttf');
+		font-weight: normal;
+		font-display: swap;
+	}
+
 	body {
 		@apply text-zinc-600 dark:text-zinc-400;
 	}

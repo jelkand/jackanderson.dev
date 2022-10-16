@@ -1,5 +1,5 @@
-code[class*='language-'][data-mode='dark'],
-pre[class*='language-'][data-mode='dark'] {
+code[class*='language-'],
+pre[class*='language-'] {
 	text-align: left;
 	white-space: pre;
 	word-spacing: normal;
@@ -21,185 +21,185 @@ pre[class*='language-'][data-mode='dark'] {
 	hyphens: none;
 }
 
-code[class*='language-'][data-mode='dark']::-moz-selection,
-pre[class*='language-'][data-mode='dark']::-moz-selection,
-code[class*='language-'][data-mode='dark'] ::-moz-selection,
-pre[class*='language-'][data-mode='dark'] ::-moz-selection {
+code[class*='language-']::-moz-selection,
+pre[class*='language-']::-moz-selection,
+code[class*='language-'] ::-moz-selection,
+pre[class*='language-'] ::-moz-selection {
 	background: #363636;
 }
 
-code[class*='language-'][data-mode='dark']::selection,
-pre[class*='language-'][data-mode='dark']::selection,
-code[class*='language-'][data-mode='dark'] ::selection,
-pre[class*='language-'][data-mode='dark'] ::selection {
+code[class*='language-']::selection,
+pre[class*='language-']::selection,
+code[class*='language-'] ::selection,
+pre[class*='language-'] ::selection {
 	background: #363636;
 }
 
-:not(pre) > code[class*='language-'][data-mode='dark'] {
+:not(pre) > code[class*='language-'] {
 	white-space: normal;
 	border-radius: 0.2em;
 	padding: 0.1em;
 }
 
-pre[class*='language-'][data-mode='dark'] {
+pre[class*='language-'] {
 	overflow: auto;
 	position: relative;
 	margin: 0.5em 0;
 	padding: 1.25em 1em;
 }
 
-.language-css[data-mode='dark'] > code,
-.language-sass[data-mode='dark'] > code,
-.language-scss[data-mode='dark'] > code {
+.language-css > code,
+.language-sass > code,
+.language-scss > code {
 	color: #fd9170;
 }
 
-[class*='language-'][data-mode='dark'] .namespace {
+[class*='language-'] .namespace {
 	opacity: 0.7;
 }
 
-.token.atrule[data-mode='dark'] {
+.token.atrule {
 	color: #c792ea;
 }
 
-.token.attr-name[data-mode='dark'] {
+.token.attr-name {
 	color: #ffcb6b;
 }
 
-.token.attr-value[data-mode='dark'] {
+.token.attr-value {
 	color: #a5e844;
 }
 
-.token.attribute[data-mode='dark'] {
+.token.attribute {
 	color: #a5e844;
 }
 
-.token.boolean[data-mode='dark'] {
+.token.boolean {
 	color: #c792ea;
 }
 
-.token.builtin[data-mode='dark'] {
+.token.builtin {
 	color: #ffcb6b;
 }
 
-.token.cdata[data-mode='dark'] {
+.token.cdata {
 	color: #80cbc4;
 }
 
-.token.char[data-mode='dark'] {
+.token.char {
 	color: #80cbc4;
 }
 
-.token.class[data-mode='dark'] {
+.token.class {
 	color: #ffcb6b;
 }
 
-.token.class-name[data-mode='dark'] {
+.token.class-name {
 	color: #f2ff00;
 }
 
-.token.comment[data-mode='dark'] {
+.token.comment {
 	color: #616161;
 }
 
-.token.constant[data-mode='dark'] {
+.token.constant {
 	color: #c792ea;
 }
 
-.token.deleted[data-mode='dark'] {
+.token.deleted {
 	color: #ff6666;
 }
 
-.token.doctype[data-mode='dark'] {
+.token.doctype {
 	color: #616161;
 }
 
-.token.entity[data-mode='dark'] {
+.token.entity {
 	color: #ff6666;
 }
 
-.token.function[data-mode='dark'] {
+.token.function {
 	color: #c792ea;
 }
 
-.token.hexcode[data-mode='dark'] {
+.token.hexcode {
 	color: #f2ff00;
 }
 
-.token.id[data-mode='dark'] {
+.token.id {
 	color: #c792ea;
 	font-weight: bold;
 }
 
-.token.important[data-mode='dark'] {
+.token.important {
 	color: #c792ea;
 	font-weight: bold;
 }
 
-.token.inserted[data-mode='dark'] {
+.token.inserted {
 	color: #80cbc4;
 }
 
-.token.keyword[data-mode='dark'] {
+.token.keyword {
 	color: #c792ea;
 }
 
-.token.number[data-mode='dark'] {
+.token.number {
 	color: #fd9170;
 }
 
-.token.operator[data-mode='dark'] {
+.token.operator {
 	color: #89ddff;
 }
 
-.token.prolog[data-mode='dark'] {
+.token.prolog {
 	color: #616161;
 }
 
-.token.property[data-mode='dark'] {
+.token.property {
 	color: #80cbc4;
 }
 
-.token.pseudo-class[data-mode='dark'] {
+.token.pseudo-class {
 	color: #a5e844;
 }
 
-.token.pseudo-element[data-mode='dark'] {
+.token.pseudo-element {
 	color: #a5e844;
 }
 
-.token.punctuation[data-mode='dark'] {
+.token.punctuation {
 	color: #89ddff;
 }
 
-.token.regex[data-mode='dark'] {
+.token.regex {
 	color: #f2ff00;
 }
 
-.token.selector[data-mode='dark'] {
+.token.selector {
 	color: #ff6666;
 }
 
-.token.string[data-mode='dark'] {
+.token.string {
 	color: #a5e844;
 }
 
-.token.symbol[data-mode='dark'] {
+.token.symbol {
 	color: #c792ea;
 }
 
-.token.tag[data-mode='dark'] {
+.token.tag {
 	color: #ff6666;
 }
 
-.token.unit[data-mode='dark'] {
+.token.unit {
 	color: #fd9170;
 }
 
-.token.url[data-mode='dark'] {
+.token.url {
 	color: #ff6666;
 }
 
-.token.variable[data-mode='dark'] {
+.token.variable {
 	color: #ff6666;
 }

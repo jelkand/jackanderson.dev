@@ -7,7 +7,7 @@ import { website } from '$lib/info';
 import type { RequestHandler } from './$types';
 
 export const prerender = true;
-const postsUrl = `${website}/posts`;
+const postsUrl = `${website}/blog`;
 
 export const GET: RequestHandler = async ({ setHeaders }) => {
 	setHeaders({

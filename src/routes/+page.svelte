@@ -1,18 +1,44 @@
-<div class="h-screen m-10">
-	<h1 class="text-4xl">Hi, I'm Jack.</h1>
-	<h2 class="text-lg my-2">
-		I currently work as a tech lead and software engineer at <a href="https://atomic.financial"
-			>Atomic Financial.</a
-		>
-	</h2>
+<script lang="ts">
+	import ArrowRightIcon from '$lib/components/ArrowRightIcon.svelte';
+	import PostsList from '$lib/components/PostsList.svelte';
+	import SocialLinks from '$lib/components/SocialLinks.svelte';
+	import { avatar, bio, name } from '$lib/info.js';
+	import type { PageData } from './$types';
 
-	<h2 class="text-lg my-2">
-		Previously, I worked at Earnest, Impossible Bureau, NICE InContact, and Goldman Sachs.
-	</h2>
+	export let data: PageData;
+</script>
 
-	<p>
-		I maintain this site as a playground for front end development, and as a place to write and
-		share my thoughts. Mostly I write about soft skills, product development, and software
-		engineering in general.
-	</p>
+<svelte:head>
+	<title>{name}</title>
+	<meta name="description" content={bio} />
+</svelte:head>
+
+<div class="flex flex-col flex-grow gap-8 pb-16">
+	<!-- bio -->
+	<section class="flex flex-col items-center gap-16 pt-8 pb-16">
+		<div class="flex flex-col items-center w-full gap-6 rounded-lg">
+			<img
+				src={avatar}
+				alt={name}
+				class="mx-auto rounded-full w-36 h-36 ring-2 ring-zinc-200 dark:ring-zinc-700"
+			/>
+			<div class="flex gap-6">
+				<SocialLinks />
+			</div>
+			<p class="text-base text-zinc-600 dark:text-zinc-400">
+				{bio}
+			</p>
+		</div>
+	</section>
+	<section class="w-full">
+		<div class="flex items-center justify-between gap-4 mb-8">
+			<h2 class="text-sm font-medium sm:text-base text-zinc-400 dark:text-zinc-500">
+				Most Recent Posts
+			</h2>
+			<a href="/blog" class="flex items-center gap-1 text-sm font-medium text-teal-500"
+				>View All <ArrowRightIcon class="w-4 h-4" /></a
+			>
+		</div>
+		<PostsList posts={data.posts} />
+	</section>
 </div>

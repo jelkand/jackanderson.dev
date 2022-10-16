@@ -5,4 +5,9 @@ export type Post = {
 	description: string;
 	category?: string;
 	tags?: string[];
+	preview?: {
+		html?: unknown;
+	};
+	readingTime?: string;
+	headings?: { id: string; depth: number; value?: unknown }[];
 };

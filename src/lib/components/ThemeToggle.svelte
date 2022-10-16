@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { Icon } from '@steeze-ui/svelte-icon';
-	import { Sun, Moon } from '@steeze-ui/heroicons';
+	import { SunIcon, MoonIcon } from 'svelte-feather-icons';
+
 	import { browser } from '$app/environment';
 	import { Theme } from '$lib/types/Theme';
 
@@ -34,7 +34,7 @@
 			}
 		}}
 	>
-		<Icon src={Moon} theme="solid" class="text-slate-500 hidden dark:block" />
-		<Icon src={Sun} theme="solid" class="text-slate-400 block dark:hidden" />
+		<MoonIcon class="text-slate-500 hidden dark:block" />
+		<SunIcon class="text-slate-400 block dark:hidden" />
 	</button>
 {/if}

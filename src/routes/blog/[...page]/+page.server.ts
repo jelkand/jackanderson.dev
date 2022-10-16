@@ -10,7 +10,7 @@ export const load: PageServerLoad = ({ params }) => {
 	if (params.page) {
 		try {
 			// a url of /posts/page/2 will come through as 'page/2' for params.page
-			const index = params.page.split('blog/').pop();
+			const index = params.page.split('page/').pop();
 
 			if (index) {
 				page = parseInt(index);

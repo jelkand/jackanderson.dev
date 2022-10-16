@@ -8,7 +8,7 @@ export const lastName = 'Anderson';
 export const name = `${firstName} ${lastName}`;
 
 /**
- * Used for SEO in /posts/[slug]
+ * Used for SEO in /blog/[slug]
  */
 export const website = 'https://jackanderson.dev/';
 
