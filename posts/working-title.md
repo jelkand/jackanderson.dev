@@ -14,7 +14,7 @@ but now nobody but us can reference our list. We needed some kind of reference w
 I put Gatsby through its paces again, and here are some general notes:
 
 - Integration with a CMS like Contentful is where Gatsby really starts to shine. I'm able to configure content, and Gatsby bakes it in at build time.
-- `gatsby-plugin-graphql-codegen` is a bit of a pain. As mentioned in my [last post](/building-the-blog) typing GraphQL responses is an enormous opportunity, but there are two problems here:
+- `gatsby-plugin-graphql-codegen` is a bit of a pain. As mentioned in my [last post](/blog/building-the-blog) typing GraphQL responses is an enormous opportunity, but there are two problems here:
   - It runs on every build, which is too expensive. The schema should rarely change, it's better to run this ad-hoc. Perhaps better to run the underlying tooling (`graphql-codegen`) independent of Gatsby.
   - It blew up entirely when parsing Contentful's API. Not sure why, I didn't take the time to debug and just ended up writing my own types. 🤷‍♂️
 
