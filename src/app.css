@@ -1,59 +1,24 @@
-@tailwind base;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import './prism-material-light.css';
+@import './prism-material-dark.css';
 
 @layer base {
-	@font-face {
-		font-family: 'Barlow';
-		src: local('Barlow'), url('/fonts/Barlow-Regular.ttf');
-		font-weight: normal;
-		font-display: swap;
-	}
-	@font-face {
-		font-family: 'Roboto Mono';
-		src: local('Roboto Mono'), url('/fonts/RobotoMono-VariableFont_wght.ttf');
-		font-weight: normal;
-		font-display: swap;
+	body {
+		@apply text-zinc-600 dark:text-zinc-400;
 	}
 
-	a {
-		@apply underline text-blue-600 hover:text-blue-800 visited:text-purple-600;
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		@apply text-zinc-900 dark:text-zinc-200;
+	}
+
+	hr {
+		@apply border-zinc-100 dark:border-zinc-700/25;
 	}
 }
-
-@layer utilities {
-	.focus {
-		@apply outline-none focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 dark:focus-visible:ring-blue-300;
-	}
-}
-
-.prose img {
-	@apply rounded-md shadow-md dark:shadow-slate-900;
-}
-
-.prose video {
-	@apply rounded-md shadow-md dark:shadow-slate-900;
-}
-
-.prose pre {
-	@apply shadow-md dark:shadow-slate-900;
-}
-
-hr {
-	@apply !border-slate-300 dark:!border-slate-700;
-}
-
-button {
-	@apply rounded-md;
-	@apply focus;
-}
-
-a {
-	@apply rounded-sm;
-	@apply focus;
-}
-
-svg {
-	@apply outline-none focus:outline-none;
-}
-
-@tailwind components;
-@tailwind utilities;
