@@ -1,14 +1,9 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import './prism-material-dark.css';
+@import 'tailwindcss/utilities';
 
 @layer base {
-	@font-face {
-		font-family: 'Barlow';
-		src: local('Barlow'), url('/fonts/Barlow-Regular.ttf');
-		font-weight: normal;
-		font-display: swap;
-	}
 	@font-face {
 		font-family: 'Roboto Mono';
 		src: local('Roboto Mono'), url('/fonts/RobotoMono-VariableFont_wght.ttf');
@@ -16,7 +11,20 @@
 		font-display: swap;
 	}
 
-	a {
-		@apply underline text-blue-600 hover:text-blue-800 visited:text-purple-600;
+	body {
+		@apply text-zinc-600 dark:text-zinc-400;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		@apply text-zinc-900 dark:text-zinc-200;
+	}
+
+	hr {
+		@apply border-zinc-100 dark:border-zinc-700/25;
 	}
 }

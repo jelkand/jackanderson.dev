@@ -1,8 +1,8 @@
-export type Post = {
-	slug: string;
+export type Metadata = {
 	title: string;
-	date: Date;
+	date: string;
 	description: string;
+	preview?: string;
 	category?: string;
 	tags?: string[];
 };

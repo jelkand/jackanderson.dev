@@ -1,30 +1,27 @@
 import adapter from '@sveltejs/adapter-auto';
 import preprocess from 'svelte-preprocess';
 import { mdsvex } from 'mdsvex';
-import path from 'path';
+import mdsvexConfig from './mdsvex.config.js';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	// Consult https://github.com/sveltejs/svelte-preprocess
 	// for more information about preprocessors
-	extensions: ['.svelte', '.svx'],
+	extensions: ['.svelte', ...mdsvexConfig.extensions],
 	preprocess: [
 		preprocess({
 			postcss: true
 		}),
-		mdsvex({
-			layout: './src/layouts/post.svelte'
-		})
+		mdsvex(mdsvexConfig)
 	],
 
 	kit: {
 		adapter: adapter(),
-		vite: {
-			resolve: {
-				alias: {
-					src: path.resolve('./src/')
-				}
-			}
+		alias: {
+			$: 'src'
+		},
+		prerender: {
+			entries: ['*', '/sitemap.xml', '/atom.xml']
 		}
 	}
 };
